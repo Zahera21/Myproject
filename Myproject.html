@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Reflection-app</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Daily Reflection</h1>
+      <form id="morningForm">
+        <label for="feeling">How are you feeling this morning?</label><br />
+        <select id="feeling" name="feeling" required>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="anxious">Anxious</option>
+          <option value="tired">Tired</option>
+          <option value="excited">Excited</option></select
+        ><br /><br />
+        <label for="description">Tell us why you feel this way:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+        <button type="submit">Submit Morning Check-in</button>
+      </form>
+
+      <div id="adviceSection" class="hidden">
+        <h2>Advice For You:</h2>
+        <p id="adviceText"></p>
+
+        <h3>Recommended Book:</h3>
+        <p id="bookRecommendation"></p>
+      </div>
+
+      <h2>End of Day Check-in</h2>
+      <form id="eveningForm" style="display: none">
+        <label for="daySummary">How was your day?</label><br />
+        <textarea
+          id="daySummary"
+          name="daySummary"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+        <label for="feedback">How are you feeling now?</label><br />
+        <select id="feedback" name="feedback" required>
+          <option value="">Select a feeling</option>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="anxious">Anxious</option>
+          <option value="tired">Tired</option>
+          <option value="excited">Excited</option></select
+        ><br /><br />
+
+        <button type="submit">Submit End of Day Feedback</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
